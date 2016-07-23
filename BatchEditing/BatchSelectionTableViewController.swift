@@ -46,6 +46,9 @@ class BatchSelectionTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle {
+        return .None
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -93,8 +96,13 @@ class BatchSelectionTableViewController: UITableViewController {
     */
     
     func editCell() {
+        var firstCell = tableView.visibleCells.first
+        print(firstCell?.bounds)
+        print("*************")
         self.tableView.editing = true
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: #selector(BatchSelectionTableViewController.done))
+        firstCell = tableView.visibleCells.first
+        print(firstCell?.bounds)
     }
     
     func done() {
