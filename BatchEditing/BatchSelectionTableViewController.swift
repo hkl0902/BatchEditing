@@ -12,12 +12,9 @@ class BatchSelectionTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.navigationItem.rightBarButtonItem?.target = self
+        self.navigationItem.rightBarButtonItem?.action = #selector(BatchSelectionTableViewController.editCell)
     }
 
     override func didReceiveMemoryWarning() {
@@ -94,5 +91,15 @@ class BatchSelectionTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func editCell() {
+        self.tableView.editing = true
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: #selector(BatchSelectionTableViewController.done))
+    }
+    
+    func done() {
+        self.tableView.editing = false
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Edit, target: self, action: #selector(BatchSelectionTableViewController.editCell))
+    }
 
 }
