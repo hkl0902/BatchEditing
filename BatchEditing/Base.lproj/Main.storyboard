@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Batch Selection Table View Controller-->
@@ -14,13 +15,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="4zx-ap-wmX" customClass="BatchSelectionTableViewCell" customModule="BatchEditing" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="4zx-ap-wmX" customClass="BatchSelectionTableViewCell" customModule="BatchEditing" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4zx-ap-wmX" id="vfL-JY-uYc">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgG-Do-i2G">
+                                            <rect key="frame" x="8" y="0.0" width="584" height="36"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="QgG-Do-i2G" secondAttribute="bottom" constant="-0.5" id="At9-2B-Sfj"/>
+                                        <constraint firstItem="QgG-Do-i2G" firstAttribute="top" secondItem="vfL-JY-uYc" secondAttribute="top" id="JZl-ab-Q6d"/>
+                                        <constraint firstItem="QgG-Do-i2G" firstAttribute="leading" secondItem="vfL-JY-uYc" secondAttribute="leadingMargin" id="j6n-dT-yzz"/>
+                                        <constraint firstItem="QgG-Do-i2G" firstAttribute="trailing" secondItem="vfL-JY-uYc" secondAttribute="trailingMargin" id="qY3-9C-5Yl"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="QgG-Do-i2G" id="tTM-UM-Q9u"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
