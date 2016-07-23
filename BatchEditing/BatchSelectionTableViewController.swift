@@ -96,13 +96,14 @@ class BatchSelectionTableViewController: UITableViewController {
     */
     
     func editCell() {
-        var firstCell = tableView.visibleCells.first
-        print(firstCell?.frame)
-        print("*************")
+        var firstCell = tableView.visibleCells.first as! BatchSelectionTableViewCell
+        print(firstCell.nameLabel.bounds)
         self.tableView.editing = true
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: #selector(BatchSelectionTableViewController.done))
-        firstCell = tableView.visibleCells.first
-        print(firstCell?.frame)
+        firstCell = tableView.visibleCells.first as! BatchSelectionTableViewCell
+        print(firstCell.nameLabel.bounds)
+        print("*****")
+        
     }
     
     func done() {
