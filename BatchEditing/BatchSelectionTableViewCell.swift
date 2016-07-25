@@ -11,6 +11,7 @@ import UIKit
 class BatchSelectionTableViewCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
+    private var editingLeftView: UIView?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,16 +24,36 @@ class BatchSelectionTableViewCell: UITableViewCell {
     }
     
     func addSelectinCircle(differenceBetween: Double) {
-        /*
-        let origin = CGPoint(x: -differenceBetween, y: Double(self.bounds.height))
-        let view = UIView(frame: CGRect(origin: origin, size: CGSize(width: differenceBetween, height: Double(self.bounds.height))))
-        view.backgroundColor = UIColor.redColor()
-        */
-        
         let origin = CGPoint(x: 0, y: 0)
         let view = UIView(frame: CGRect(origin: origin, size: CGSize(width: differenceBetween, height: Double(self.bounds.height))))
-        view.backgroundColor = UIColor.redColor()
-        self.addSubview(view)
+        editingLeftView = view
+        self.addSubview(editingLeftView!)
+        addCircleToView(editingLeftView!)
     }
+    
+    func addCircleToView(view: UIView) {
+        let width = view.bounds.width
+        let height = view.bounds.width
+        
+        var radius: CGFloat?
+        if width > height {
+            radius = height * 0.3
+        } else {
+            radius = width * 0.3
+        }
+        
+        let center = CGPoint(x: width/2, y: height/2)
+        let origin = CGPoint(x: center.x - radius!, y: center.y - radius!)
+        
+        let frame = CGRect(origin: origin, size: CGSize(width: radius! * 2, height: radius! * 2))
+        let circleView = UIView(frame: frame)
+        circleView.layer.cornerRadius = radius!
+        circleView.backgroundColor = UIColor.redColor()
+        view.addSubview(circleView)
+    }
+    
+    
+    
+    
 
 }
