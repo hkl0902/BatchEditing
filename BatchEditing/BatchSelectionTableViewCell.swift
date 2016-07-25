@@ -18,8 +18,6 @@ class BatchSelectionTableViewCell: UITableViewCell {
             }
         }
     }
-    var isSelectedForEditing: Bool = false
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -27,8 +25,8 @@ class BatchSelectionTableViewCell: UITableViewCell {
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        
+        
     }
     
     func addSelectinCircle(differenceBetween: Double) {
