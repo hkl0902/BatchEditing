@@ -21,5 +21,18 @@ class BatchSelectionTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func addSelectinCircle(differenceBetween: Double) {
+        /*
+        let origin = CGPoint(x: -differenceBetween, y: Double(self.bounds.height))
+        let view = UIView(frame: CGRect(origin: origin, size: CGSize(width: differenceBetween, height: Double(self.bounds.height))))
+        view.backgroundColor = UIColor.redColor()
+        */
+        
+        let origin = CGPoint(x: 0, y: 0)
+        let view = UIView(frame: CGRect(origin: origin, size: CGSize(width: differenceBetween, height: Double(self.bounds.height))))
+        view.backgroundColor = UIColor.redColor()
+        self.addSubview(view)
+    }
 
 }
