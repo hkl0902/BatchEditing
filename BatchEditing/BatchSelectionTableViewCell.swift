@@ -11,7 +11,15 @@ import UIKit
 class BatchSelectionTableViewCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
-    private var editingLeftView: UIView?
+    private var editingLeftView: UIView? {
+        didSet {
+            if editingLeftView != nil {
+                editingLeftView?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(BatchSelectionTableViewCell.setAsSelected(_:))))
+            }
+        }
+    }
+    var isSelectedForEditing: Bool = false
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -53,6 +61,14 @@ class BatchSelectionTableViewCell: UITableViewCell {
         view.addSubview(circleView)
     }
     
+    func setAsSelected(gesture: UITapGestureRecognizer) {
+        switch gesture.state {
+        case .Ended:
+            selected = !selected
+        default:
+            break
+        }
+    }
     
     
     
