@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		4749B6151D4437110035C3A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4749B6141D4437110035C3A8 /* AppDelegate.swift */; };
-		4749B6171D4437110035C3A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4749B6161D4437110035C3A8 /* ViewController.swift */; };
 		4749B61A1D4437110035C3A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4749B6181D4437110035C3A8 /* Main.storyboard */; };
 		4749B61C1D4437110035C3A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4749B61B1D4437110035C3A8 /* Assets.xcassets */; };
 		4749B61F1D4437110035C3A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4749B61D1D4437110035C3A8 /* LaunchScreen.storyboard */; };
+		4749B6291D4437620035C3A8 /* BatchSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4749B6281D4437620035C3A8 /* BatchSelectionTableViewController.swift */; };
+		4749B62B1D4437700035C3A8 /* BatchSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4749B62A1D4437700035C3A8 /* BatchSelectionTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4749B6111D4437110035C3A8 /* BatchEditing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BatchEditing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4749B6141D4437110035C3A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4749B6161D4437110035C3A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4749B6191D4437110035C3A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4749B61B1D4437110035C3A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4749B61E1D4437110035C3A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4749B6201D4437110035C3A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4749B6281D4437620035C3A8 /* BatchSelectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatchSelectionTableViewController.swift; sourceTree = "<group>"; };
+		4749B62A1D4437700035C3A8 /* BatchSelectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatchSelectionTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +56,9 @@
 		4749B6131D4437110035C3A8 /* BatchEditing */ = {
 			isa = PBXGroup;
 			children = (
+				4749B6281D4437620035C3A8 /* BatchSelectionTableViewController.swift */,
+				4749B62A1D4437700035C3A8 /* BatchSelectionTableViewCell.swift */,
 				4749B6141D4437110035C3A8 /* AppDelegate.swift */,
-				4749B6161D4437110035C3A8 /* ViewController.swift */,
 				4749B6181D4437110035C3A8 /* Main.storyboard */,
 				4749B61B1D4437110035C3A8 /* Assets.xcassets */,
 				4749B61D1D4437110035C3A8 /* LaunchScreen.storyboard */,
@@ -136,8 +139,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4749B6171D4437110035C3A8 /* ViewController.swift in Sources */,
+				4749B62B1D4437700035C3A8 /* BatchSelectionTableViewCell.swift in Sources */,
 				4749B6151D4437110035C3A8 /* AppDelegate.swift in Sources */,
+				4749B6291D4437620035C3A8 /* BatchSelectionTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
