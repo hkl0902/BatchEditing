@@ -48,7 +48,8 @@ class BatchSelectionTableViewCell: UITableViewCell {
         let frame = CGRect(origin: origin, size: CGSize(width: radius! * 2, height: radius! * 2))
         let circleView = UIView(frame: frame)
         circleView.layer.cornerRadius = radius!
-        circleView.backgroundColor = UIColor.redColor()
+        circleView.layer.borderColor = UIColor.redColor().CGColor
+        circleView.layer.borderWidth = 3.0
         view.addSubview(circleView)
     }
     
